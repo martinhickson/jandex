@@ -5,10 +5,12 @@
         <groupId>io.smallrye</groupId>
         <artifactId>jandex-parent</artifactId>
         <version>3.1.8</version>
+        <relativePath>..</relativePath>
     </parent>
 
     <artifactId>jandex-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
+    <version>3.1.8.1</version>
 
     <name>Jandex: Maven Plugin</name>
 
@@ -35,6 +37,7 @@
         <dependency>
             <groupId>io.smallrye</groupId>
             <artifactId>jandex</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
 
         <dependency>
@@ -70,7 +73,7 @@
                     <dependency>
                         <groupId>io.smallrye</groupId>
                         <artifactId>jandex</artifactId>
-                        <version>${project.version}</version>
+                        <version>${project.parent.version}</version>
                     </dependency>
                     <!-- override Groovy version to support the latest JDK -->
                     <dependency>
